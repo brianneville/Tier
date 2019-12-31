@@ -3,4 +3,4 @@
 
 
 ;boolean XOR function
-;store not sp and not sp-1 on stack
+;acts on sp and sp-1

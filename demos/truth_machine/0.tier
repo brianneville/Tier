@@ -1,11 +1,9 @@
 }=_{#
   >^
 
-
-
 ;truth machine. take input. if input == 0, print 0, terminate program. else if input == 1, output 1 forever
 ;this program takes input from -ts flag
 ;longer version, assuming that non-boolean inputs are possible
 ;run program and ends
-;   )=_!#     #>]!_
+;   )=_{#     #>]{_
 ;     >['1'-[=^^ ^<

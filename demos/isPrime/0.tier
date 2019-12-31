@@ -3,5 +3,3 @@
               1
 
 ;take in a number and test if a number is prime
-;by dividing it by all numbers less than it
-;python Tier.py -d D:\Users\Brian\PycharmProjects\Tier\demos\isPrime -v -t 0.03
