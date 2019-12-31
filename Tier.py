@@ -590,22 +590,3 @@ if __name__ == '__main__':
 
     if visual_dbg:
         VDB.destroy_window()
-
-
-# python Tier.py -d D:\Users\Brian\PycharmProjects\Tier\program1 -t 0.2 -i -v
-# python Tier.py -d D:/users/brian/pycharmprojects/Tier/powxy
-# python Tier.py -d D:\Users\Brian\PycharmProjects\Tier\practise\io -i -v
-# python Tier.py -d D:\Users\Brian\PycharmProjects\Tier\demos\isPrime
-
-
-# curses colors from colors.h:
-"""
-COLOR_BLACK   0
-COLOR_RED     1
-COLOR_GREEN   2
-COLOR_YELLOW  3
-COLOR_BLUE    4
-COLOR_MAGENTA 5
-COLOR_CYAN    6
-COLOR_WHITE   7
-"""
