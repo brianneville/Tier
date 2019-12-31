@@ -1,0 +1,11 @@
+'9'['3'_
+       >>>>@1..(]@1~[[[{#
+
+
+
+;perform sp to the power of sp-1 (e.g. here: 3^9)
+;this function in 0.tier is:     >@1..(]@1~
+;this enters function, and when function returns, pushes result to top of stack
+;this has been placed on an offset line to show how functions can be modules within files,
+;this is effective as long as referenced code is aligned in all files (e.g. in 1.tier and 2.tier)
+;flaws: cannot handle exponents which are not natural numbers. enters infinite loop on evaluating 0^0
