@@ -128,16 +128,14 @@ def change_vel(arg):
 
 
 def jump():
-    global mode, jump_address, pc
+    global mode, jump_address, pc, jump_pos
     if not mode:
         mode = 3
+        jump_pos = pc[0:2]
     elif mode is 3:
         mode = 0
         str_ver = ''.join(jump_address)  # string version allows to jump to -1.tier
-        col_correction = velocity[0] * (len(str_ver) + 1)  # add 1 for the @ sign position
-        row_correction = velocity[1] * (len(str_ver) + 1)
-        pc[0] -= col_correction
-        pc[1] -= row_correction
+        pc[0:2] = jump_pos[0:2]
         pc[2] = int(str_ver)
         jump_address = []
 
@@ -395,7 +393,7 @@ if __name__ == '__main__':
                     self.done_startup = 0
                     cwindow.clear()
                 for indx, k in enumerate(clines_dict[f'{pc[2]}']):
-                    if indx == pc[1]:
+                    if indx == pc[1] and pc[0] >= 0:        # must be >=0 to allow drawing at position
                         col_start = pc[0]
                         cwindow.addstr(indx, 0, k[:col_start])
                         cwindow.addstr(indx, col_start, k[col_start:col_start + 1], curses.color_pair(mode + 1))
@@ -535,6 +533,7 @@ if __name__ == '__main__':
     string_to_store = []
     num_to_store = []  # build as str to handle '.' (vs num*10 + new)
     jump_address = []
+    jump_pos = [0, 0]
     changing_mode = False
 
     while not prog_over:
